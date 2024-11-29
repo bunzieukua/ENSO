@@ -1,0 +1,13 @@
+#for oni and enso
+!apt-get install libproj-dev proj-data proj-bin --quiet
+!apt-get install libgeos-dev --quiet
+!pip install cython --quiet
+!pip install cartopy --quiet
+!pip install geoviews
+
+!apt-get -qq install python-cartopy python3-cartopy  --quiet
+!pip uninstall -y shapely  --quiet
+!pip install shapely --no-binary shapely  --quiet
+
+!pip install boto3 --quiet
+
