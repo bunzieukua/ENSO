@@ -33,8 +33,7 @@ data.plot(
 
 """Visualize time series precipitation at a specific location"""
 
-"""I'm visualizing data for Hanoi, Vietnam here, hence the name and the coordinates. 
-Please adjust the code for your preferred location"""
+#I'm visualizing data for Hanoi, Vietnam here, hence the name and the coordinates. Please adjust the code for your preferred location
 
 grid_hn = metadata.precip.sel(latitude=21, longitude=105, method="nearest") 
 grid_hn = grid_hn.sel(time=slice("2020-01-01", "2024-01-01"))
