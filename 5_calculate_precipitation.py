@@ -2,7 +2,7 @@
 In this file, we will download the precipitation dataset from NOAA using s3fs and pooch packages.
 Again, I highly recommend you to look at the dataset on the official webpage to familiarize yourself with the
 data structure and the naming system.
-Not all files are named the same, and you will have to make modification in file names so as to 
+Not all files are named the same, and you will have to make modification in file names so as to get the desired data
 """
 
 fs = s3fs.S3FileSystem(anon=True)
