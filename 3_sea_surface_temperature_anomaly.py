@@ -26,18 +26,16 @@ According to NOAA, the reference period for sea surface temperature anomalies sh
 Here I choose the 1991-2020
 """
 
-"""choosing reference period"""
+#choosing reference period
 sst_30yr = dt.sst.sel(time=slice("1991-01-01", "2020-01-01"))
 
-"""calculate the mean of each month in the period"""
+#calculate the mean of each month in the period
 sst_clim = sst_30yr.groupby("time.month").mean()
 
-"""
-calculate the sea surface temperature anomalies by substracting the mean of each month in the whole dataset
-from the mean of the reference period
-"""
+#calculate the sea surface temperature anomalies by substracting the mean of each month in the whole dataset from the mean of the reference period
 sst_whole_dataset = dt.sst.groupby("time.month")
 sst_anom = sst_whole_dataset - sst_clim
+
 
 """that's it for the calculation part, now we move onto plotting graphs"""
 sst_oct2024 = sst_anom.sel(time="2024-10-01")
